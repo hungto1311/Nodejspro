@@ -10,11 +10,16 @@ const path = require("node:path");
 app.set("views", path.join(__dirname, "views"))
 app.set("view engine", "ejs");
 
-//config routes
-WebRoute(app);
+//config req.body
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 //config static files:images/css/js
 app.use(express.static(path.join(__dirname, '../public')));
+
+//config routes
+WebRoute(app);
+
 
 
 app.listen(PORT, () => {

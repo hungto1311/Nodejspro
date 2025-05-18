@@ -15,22 +15,24 @@
     <div style="width: 600; margin: auto;">
 
         <h3 style="padding: 10px 0;">Create a new user</h3>
-        <form action="" method="">
+        <form action="/handle-create-user" method="post">
 
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Email:</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="example@gmail.com">
+                <input type="email" class="form-control" id="exampleFormControlInput1" name="fullname"
+                    placeholder="example@gmail.com">
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Name:</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Your name">
+                <input type="text" class="form-control" id="exampleFormControlInput1" name="email"
+                    placeholder="Your name">
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Address:</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+                <textarea name="address" class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
             </div>
             <div class="mb-3">
-                <button class="btn btn-warning">Submit</button>
+                <button type="submit" class="btn btn-warning">Submit</button>
             </div>
         </form>
     </div>
